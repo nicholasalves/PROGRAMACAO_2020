@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main (void){
+    /* NOTAS */
+    int  nota100, nota50, nota20, nota10, nota5, nota2;
+    /* MOEDAS */
+    int m1, m50, m25, m10, m5, m01;
+    double n;
+       scanf ("%lf", &n);
+            /* NOTAS */
+            int notas = n;
+            /* MOEDAS */
+                int moedas = (n-notas)*100;
+                if((moedas*1000) % 10 == 9){
+                    moedas ++;
+                }
+               nota100 = notas/100;                
+                notas = notas%100;
+                nota50 = notas/50;
+                notas = notas%50;
+                nota20 = notas/20;
+                notas = notas%20;
+                nota10 = notas/10;
+                notas = notas%10;
+                nota5 = notas/5;
+                notas = notas%5;
+                nota2 = notas/2;
+                notas = notas%2;
+                
+                m1 = notas/1;
+                notas = notas%1;
+                m50 = moedas/50;
+                moedas = moedas%50;
+                m25 = moedas/25;
+                moedas = moedas%25;
+                m10 = moedas/10;
+                moedas = moedas%10;
+                m5 = moedas/5;
+                moedas = moedas%5;
+                m01 = moedas/1;
+                moedas = moedas%1;
+                
+            printf("NOTAS:\n");
+            printf("%d nota(s) de R$ 100.00\n", nota100);
+            printf("%d nota(s) de R$ 50.00\n", nota50);
+            printf("%d nota(s) de R$ 20.00\n", nota20);
+            printf("%d nota(s) de R$ 10.00\n", nota10);
+            printf("%d nota(s) de R$ 5.00\n", nota5);
+            printf("%d nota(s) de R$ 2.00\n", nota2);
+            printf("MOEDAS:\n");
+            printf("%d moeda(s) de R$ 1.00\n", m1);
+            printf("%d moeda(s) de R$ 0.50\n", m50);
+            printf("%d moeda(s) de R$ 0.25\n", m25);
+            printf("%d moeda(s) de R$ 0.10\n", m10);
+            printf("%d moeda(s) de R$ 0.05\n", m5);
+            printf("%d moeda(s) de R$ 0.01\n", m01);
+    return 0;
+}
