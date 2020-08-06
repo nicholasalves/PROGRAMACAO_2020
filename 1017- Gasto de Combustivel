@@ -1,0 +1,10 @@
+#include <stdio.h>
+ 
+int main() {
+    int hora,velocidade;
+    double litros;
+        scanf("%d %d",&hora,&velocidade);
+            litros=(hora*velocidade)/12.0;
+                printf("%.3lf\n",litros);
+    return 0;
+}
