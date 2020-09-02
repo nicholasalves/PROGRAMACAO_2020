@@ -1,0 +1,13 @@
+#include <stdio.h>
+ 
+int main (void){
+    int par=0;
+    int x, y;
+         for(y=0;y<5;y++){
+            scanf ("%d",&x);
+                if (x%2==0)
+                par++;
+        }
+            printf("%d valores pares\n",par);
+            return 0;
+        }
