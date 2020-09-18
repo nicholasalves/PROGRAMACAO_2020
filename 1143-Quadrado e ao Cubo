@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    int x,y,z,j,k,w;
+    scanf("%d",&x);
+    for(y=1;y<=x;y++)
+    {
+      z=y*y;
+      j=y*y*y;
+      printf("%d %d %d\n",y,z,j);
+}
+    return 0;
+}
