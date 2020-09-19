@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    int L,R,x;
+
+    while(scanf("%d %d",&L,&R)!=0){
+        if(L==0&&R==0){
+            break;
+        }
+        else{
+            x=L+R;
+            printf("%d\n",x);
+        }
+    }
+    return 0;
+}
