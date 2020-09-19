@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+    int X,Y;
+    scanf("%d",&Y);
+    if(Y%2==0)
+        Y=Y+1;
+    else
+        Y=Y;
+    printf("%d\n",Y);
+    for(X=1;X<=5;X++)
+    printf("%d\n",Y+=2);
+ 
+    return 0;
+
+}
