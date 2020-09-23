@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+ float  n,total,media;
+  int x,totaln;
+     totaln = 0;
+     total = 0;
+     media = 0;
+  
+        for (x=1;x<=6;x++) {
+          scanf("%f", &n);
+        if(n>0){
+          totaln+= 1;
+          total+= n;
+       }
+      }
+      media=total/totaln;
+
+     printf("%d valores positivos\n",totaln);
+     printf("%.1f\n",media);
+    return 0;
+}
