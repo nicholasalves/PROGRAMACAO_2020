@@ -1,0 +1,67 @@
+#include <stdio.h>
+int main() {
+    int n,c,l,cont,soma,erro,instancia,quad;
+    int SUDOKU[9][9],linha,coluna,bloco_somas[3][3];
+    
+    //entrada do numero de testes
+    scanf("%d",&n);
+    //laço principal
+    for(instancia=0;instancia<n;instancia++){
+      erro=0;
+      //alimentação da matriz principal
+      for(l=0;l<9;l++){
+        for (c=0;c<9;c++){
+          scanf ("%d",&SUDOKU[l][c]);
+        }
+      }//fim da matriz principal
+
+      //inicialização da matriz de somas das submatrizes
+      for(l=0;l<3;l++){
+        for(c=0;c<3;c++){
+          bloco_somas[l][c]=0;
+        }
+      }
+
+      //inicialização dos vetores que vao acumular as somas das linhas e colunas
+      
+        linha=0;
+        coluna=0;
+      
+
+      for(l=0;l<9;l++){        
+        for(c=0;c<9;c++){
+          quad=SUDOKU[l][c]*SUDOKU[l][c];
+          bloco_somas[l/3][c/3]+=quad;
+          //linha[l]+=quad;
+          //coluna[c]+=quad;
+        }
+          
+      }
+
+      for(l=0;l<9;l++){        
+        for(c=0;c<9;c++){
+        linha=linha+((SUDOKU[l][c])*(SUDOKU[l][c])); //soma dos quadrados ds linhas   
+        }     
+       }
+      if(linha!=285){erro++;}
+
+      for(c=0;c<9;c++){        
+        for(l=0;l<9;l++){
+        coluna=coluna+((SUDOKU[l][c])*(SUDOKU[l][c])); //soma dos quadrados      
+        }     
+       }
+      if(coluna!=285){erro++;}
+      for(l=0;l<3;l++){
+        for(c=0;c<3;c++){
+            if(bloco_somas[c][l]!=285){erro++;}
+        }
+      }
+
+
+      printf ("Instancia %d\n",instancia+1);
+      if(erro==0){printf("SIM\n\n");}
+      else{printf ("NAO\n\n");}
+      printf("\n");
+    }
+  return 0;
+ }
